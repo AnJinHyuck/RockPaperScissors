@@ -1,10 +1,17 @@
 package com.example.udemyclass
 
 fun main(){
+    val rightAnswer = listOf("rock","paper","scissors")
     var computerChoice = ""
     var playerChoice = ""
     println("Rock, Paper or Scissors? Enter your choice!")
+
     playerChoice = readln()
+    while (playerChoice !in rightAnswer){
+        println("enter the right answer")
+        playerChoice= readln()
+    }
+
 
     val randomNumber = (1..3).random()
 
